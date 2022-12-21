@@ -6,29 +6,21 @@ public class CapitalizeTitle {
     }
     public static String UsingSplit(String param1){
         String CapitalizedString = "";
-        String[] MyWord = param1.split(" ");
-
-        for(String Word:MyWord){
-            //word = MyWord[i];
-            //jaVa iS eASy
-            String FirstChar = Word.substring(0,1);
+        String[] MyWord = param1.split(" ");////MyWord: ["jaVa", "iS", "eASy"]
+        for(String Word:MyWord){//MyWord: ["jaVa", "iS", "eASy"] Word; "JaVa"// once its done with first word itll go to next one
+            String FirstChar = Word.substring(0,1);//Word; "JaVa"  FirstChar: "j"
 //            String RemainingChar = Word.substring(1,Word.length()-1); or just the below one to make it easy
-            String RemainingChar = Word.substring(1);
-
-//             FirstChar.toUpperCase(); you can not write this directly cuz the String is immutable
-            FirstChar = FirstChar.toUpperCase();
+            String RemainingChar = Word.substring(1);//Word; "jaVa" RemainingChar: "aVa"
+            FirstChar = FirstChar.toUpperCase();//Word; "jaVa" FirstChar: "j" To: "J"
             RemainingChar = RemainingChar.toLowerCase();
 
-            CapitalizedString = CapitalizedString + FirstChar + RemainingChar + " ";              //<
-//            CapitalizedString +=  FirstChar + RemainingChar;  //<-- same as above                      <
-//                                                                                                         <
-//                                                                                                           <
+            CapitalizedString = CapitalizedString + FirstChar + RemainingChar + " ";
+//            CapitalizedString +=  FirstChar + RemainingChar;  //<-- same as above
 
-        }////                                                                                                   <
 
-//                                                                                                                <
-        CapitalizedString = CapitalizedString.trim();// this is just to remove the space from the front and end thats
-        // why it doesnt matter if you add space to front on end
+
+        }
+        CapitalizedString = CapitalizedString.trim();
         return CapitalizedString;
 
     }
