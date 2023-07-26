@@ -6,35 +6,36 @@ public class ReverseStringsWays {
 
         System.out.println("reversed Version: "+reverseUsingForloop(name));
         line();
-        System.out.println("Reversing String Using the String Buffer: "+ReverseUsingStringBuffer(name));
+        System.out.println("Reverse using String Buffer>>>> "+StringBuilderreverese("jermy"));
         line();
-        System.out.println("Reverssing String Using String Builder"+USingStringBuilder(name));
+        System.out.println("using StringBuilder to reverse a String>>>>> "+StringBuilderreverese("Hrakar"));
         line();
         System.out.println("Reverse String use the Regular way with forLopps: "+RegularWay(name));
         line();
-        System.out.println("The is the Regular way Reversing the String Using the ForEachLoops: "+RegularEayWithForEach(name));
+        System.out.println("using foreach to reverse a String>>>>. "+ForEachReverse("Angle"));
 
     }
 
-    public static String USingStringBuilder(String param1){
-        StringBuilder SB = new StringBuilder(param1);
-        SB.reverse();
-        return SB.toString();
+    public static String StringBuilderreverese(String param){
+        StringBuilder sb = new StringBuilder(param);
+        sb.reverse();
+        return sb.toString();
     }
-    public static String ReverseUsingStringBuffer(String str){
-        return new StringBuffer(str).reverse().toString();
+
+    public static String StringBufferReverse(String param){
+        return new StringBuffer(param).reverse().toString();
     }
-    public static String RegularEayWithForEach(String param1){
-        char[] MyCharArray = param1.toCharArray();
 
-        String ReveresedString ="";
-
-        for (char MyChar:MyCharArray) {
-            //MyChar = MyCharArray[i] no this is for the for lop
-            ReveresedString = MyChar + ReveresedString;
+    public static String ForEachReverse(String param){
+        char[]MyCharArray = param.toCharArray();
+        String ReversedString = "";
+        for(char mychar: MyCharArray){
+            ReversedString = mychar + ReversedString;
         }
-        return ReveresedString;
+        return ReversedString;
+
     }
+
     public static String RegularWay(String param1){
         char[] MyCharArray = param1.toCharArray();
         String ReversedString = "";

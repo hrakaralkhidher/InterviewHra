@@ -1,33 +1,25 @@
 public class RandomExamples {
     public static void main(String[] args) {
-        // write all the methods you know to reveres a String?
-        String StringBuffer= "Hello People";
-        System.out.println(StringBufferReversed(StringBuffer));
-        line();
-        String S1tringBuilder = "Hrakar";
-        System.out.println(StringBuilder(S1tringBuilder));
-        line();
-        String ForEach = "REversed";
-        System.out.println(ForEachRev(ForEach));
-
+        //write all the method you can to reverse a String
+        String name = "Hrakar";
+        System.out.println("ForEach(name) = " + ForEach(name));
+        String nam1 = "Gaandi";
+        System.out.println("ForLoop(nam1) = " + ForLoop(nam1));
     }
-    public static String ForEachRev (String param1){
-        char[] MyCharArray = param1.toCharArray();
-        String Reverse = "";
-        for (char MyChar: MyCharArray) {
-            Reverse = MyChar + Reverse;
+    public static String ForLoop(String param1){
+        char[]MycharArray = param1.toCharArray();
+        String revs = "";
+        for(int i = 0; i < MycharArray.length;i++){
+            revs = MycharArray[i] + revs;
         }
-        return Reverse;
+        return revs;
     }
-    public static String StringBuilder(String param1){
-        StringBuilder SB = new StringBuilder(param1);
-        SB.reverse();
-        return SB.toString();
-    }
-    public static String StringBufferReversed(String param1){
-        return new StringBuffer(param1).reverse().toString();
-    }
-    public static void line(){
-        System.out.println("*************************");
+    public static String ForEach(String param1){
+        char [] myCharArray = param1.toCharArray();
+        String rev = "";
+        for (char MyChar: myCharArray ){
+            rev = MyChar + rev;
+        }
+        return rev;
     }
 }

@@ -8,7 +8,6 @@ public class IsAnagramOrNot {
         //Triangle - Integral
         //needs - dense
         //meat - team
-
         // what you need to do to find out if they are anagram or not
         // get lowercase of them
         // sort them
@@ -28,16 +27,13 @@ public class IsAnagramOrNot {
             //get lowercase of them
             word1 = word1.toLowerCase();
             word2 = word2.toLowerCase();
-
             // sort them
             char[] word1Array = word1.toCharArray();
             char[] word2Array = word2.toCharArray();
             Arrays.sort(word1Array);
             Arrays.sort(word2Array);
-
             //check them
             ReturnValue = Arrays.equals(word1Array,word2Array);
-
         }
         return ReturnValue;
     }
@@ -54,7 +50,6 @@ public class IsAnagramOrNot {
             //meat - team
             for (int i = 0; i < Word1.length(); i++) {
                 char MyChar = Word1.charAt(i);
-
                 int positionofMyChar = Word2.indexOf(MyChar);
                 if(positionofMyChar == -1){
                     return false;
