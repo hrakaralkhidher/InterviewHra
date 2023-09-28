@@ -9,14 +9,6 @@ public class fibonacci {
             a = b;
             b = c; // we assign the values to c
             System.out.print(c + " ");
-
-//            System.out.print("______________________________");
         }
     }
 }
-//    public static int fibo(int number){
-//        int z = 0;
-//        int y = 1;
-//        for(int i = 2;i <= 10)
-//    }
-//}

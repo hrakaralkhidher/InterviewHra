@@ -3,6 +3,9 @@ public class CapitalizeTitle {
         //jaVa iS eASy  -> Java Is Easy
         System.out.println(UsingSplit("jaVa iS eASy"));
 
+        String nam = "haKaR alKhIdher";
+        System.out.println(cap(nam));
+
     }
     public static String UsingSplit(String param1){
         String CapitalizedString = "";
@@ -24,4 +27,43 @@ public class CapitalizeTitle {
         return CapitalizedString;
 
     }
+
+    public static String cap(String parmeter){
+        String capitalize = "";
+        String[]myword = parmeter.split(" ");
+
+        for(String word: myword){
+            String firstLet=word.substring(0,1).toUpperCase();
+            String remain=word.substring(1).toLowerCase();
+            capitalize = capitalize + firstLet + remain + " ";
+        }
+
+        return capitalize.trim();
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
